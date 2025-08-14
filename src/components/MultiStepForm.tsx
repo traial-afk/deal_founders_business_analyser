@@ -574,7 +574,7 @@ export default function MultiStepForm() {
                         onChange={handleChange}
                         required={question.required}
                         placeholder={question.placeholder || ''}
-                        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900"
                       />
                     )}
                   </div>
@@ -619,7 +619,7 @@ export default function MultiStepForm() {
 
           {isSubmitting && (
             <div className="mt-4 text-center">
-              <p className="text-blue-500">{submitStatus}</p>
+              <p className="text-blue-900">{submitStatus}</p>
               <div className="mt-2 flex justify-center">
                 <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-900"></div>
               </div>
@@ -631,7 +631,7 @@ export default function MultiStepForm() {
       <div className="mt-8">
         <div className="h-2 w-full bg-gray-200 rounded-full overflow-hidden">
           <div
-            className="h-full bg-blue-600 transition-all duration-300 ease-out"
+            className="h-full bg-blue-950 transition-all duration-300 ease-out"
             style={{ width: `${((currentStep + 1) / sections.length) * 100}%` }}
           ></div>
         </div>

@@ -479,7 +479,7 @@ export default function MultiStepForm() {
               Step {currentStep + 1} of {sections.length}
             </p>
             
-            <h3 className="text-xl font-semibold mb-4 text-blue-700">{currentSection.title}</h3>
+            <h3 className="text-xl font-semibold mb-4 text-blue-950">{currentSection.title}</h3>
             
             <div className="space-y-6">
               {currentSection.questions.map((question) => (
@@ -500,7 +500,7 @@ export default function MultiStepForm() {
                         onChange={handleChange}
                         required={question.required}
                         placeholder={question.placeholder || ''}
-                        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-950"
                         rows={4}
                       />
                     ) : question.type === 'select' ? (
@@ -509,7 +509,7 @@ export default function MultiStepForm() {
                         value={formData[question.id] || ''}
                         onChange={handleChange}
                         required={question.required}
-                        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-950"
                       >
                         {question.options.map((option) => (
                           <option key={option.value} value={option.value}>
@@ -526,7 +526,7 @@ export default function MultiStepForm() {
                           required={question.required && (!formData.files || formData.files.length === 0)}
                           accept={question.accept}
                           multiple={question.multiple}
-                          className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-950"
                         />
                         <p className="text-xs text-gray-500 mt-2">
                           Currently accepting the following formats: {allowedExtensions}

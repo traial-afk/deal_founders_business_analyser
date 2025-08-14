@@ -597,7 +597,7 @@ export default function MultiStepForm() {
 
             <button
               type="submit"
-              className={`${currentStep > 0 ? 'ml-auto' : ''} px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2`}
+              className={`${currentStep > 0 ? 'ml-auto' : ''} px-6 py-2 bg-blue-900 text-white rounded-md hover:bg-blue-950 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:ring-offset-2`}
               disabled={isSubmitting || fileError}
             >
               {currentStep === sections.length - 1 ? 'Submit' : 'Next'}
@@ -610,7 +610,7 @@ export default function MultiStepForm() {
               className={`mt-4 text-center ${
                 submitStatus.includes('Please fill') 
                   ? 'text-red-500' 
-                  : 'text-blue-500'
+                  : 'text-blue-900'
               }`}
             >
               {submitStatus}
@@ -621,7 +621,7 @@ export default function MultiStepForm() {
             <div className="mt-4 text-center">
               <p className="text-blue-500">{submitStatus}</p>
               <div className="mt-2 flex justify-center">
-                <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-500"></div>
+                <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-900"></div>
               </div>
             </div>
           )}

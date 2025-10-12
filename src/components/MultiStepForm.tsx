@@ -232,7 +232,7 @@ export default function MultiStepForm() {
       questions: [
         {
           id: 'files',
-          label: 'Please upload any relevant documents (maximum 4 files)',
+          label: 'Please upload any relevant documents (maximum 6 files)',
           type: 'file',
           required: true,
           accept: allowedExtensions,
@@ -255,8 +255,8 @@ export default function MultiStepForm() {
       const combinedFiles = [...existingFiles, ...newFileArray];
       
       // Check if total number of files exceeds the maximum allowed
-      if (combinedFiles.length > 4) {
-        setFileError(`Maximum 4 files allowed. You currently have ${existingFiles.length} file(s). You can add ${4 - existingFiles.length} more.`);
+      if (combinedFiles.length > 6) {
+        setFileError(`Maximum 6 files allowed. You currently have ${existingFiles.length} file(s). You can add ${6 - existingFiles.length} more.`);
         e.target.value = '';
         return;
       }
@@ -539,7 +539,7 @@ export default function MultiStepForm() {
                         {formData.files && formData.files.length > 0 && !fileError && (
                           <div className="mt-3 p-3 bg-green-50 border border-green-200 rounded-md">
                             <p className="text-green-700 font-medium mb-2">
-                              Files selected ({formData.files.length}/4):
+                              Files selected ({formData.files.length}/6):
                             </p>
                             <div className="space-y-2">
                               {formData.files.map((file, index) => (
@@ -558,9 +558,9 @@ export default function MultiStepForm() {
                                 </div>
                               ))}
                             </div>
-                            {formData.files.length < 4 && (
+                            {formData.files.length < 6 && (
                               <p className="text-sm text-gray-600 mt-2">
-                                You can add {4 - formData.files.length} more file(s).
+                                You can add {6 - formData.files.length} more file(s).
                               </p>
                             )}
                           </div>
